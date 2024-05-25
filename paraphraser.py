@@ -3,7 +3,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 
 class Paraphraser:
-    def __init__(self, context) -> str:
+    def __new__(self, context) -> str:
         pretrained = 'ramsrigouthamg/t5-large-paraphraser-diverse-high-quality'
         model = AutoModelForSeq2SeqLM.from_pretrained(pretrained)
         tokenizer = AutoTokenizer.from_pretrained(
