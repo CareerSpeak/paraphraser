@@ -1,0 +1,14 @@
+services:
+  paraphraser:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: paraphraser
+    expose:
+      - 65535:65535
+    networks:
+      - careerspeak
+
+networks:
+  careerspeak:
+    external: true
